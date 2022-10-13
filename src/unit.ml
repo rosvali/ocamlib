@@ -8,7 +8,3 @@ let compare t t =
 
 let to_string t =
     "()"
-
-let () = print_endline (to_string ());
-print_endline (Int.to_string (compare () ()));
-print_endline (Bool.to_string (equal () ()))

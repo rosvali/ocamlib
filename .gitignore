@@ -2,3 +2,5 @@ a.out
 *.cmi
 *.cmx
 *.o
+_build/
+dune-project

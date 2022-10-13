@@ -22,6 +22,3 @@ let to_float b =
 
 let to_string b =
   if b then "true" else "false"
-
-let () = print_endline (to_string false);
-print_endline (Bool.to_string (equal true true));
