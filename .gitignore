@@ -3,4 +3,4 @@ a.out
 *.cmx
 *.o
 _build/
-dune-project
+.merlin
