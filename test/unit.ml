@@ -1,4 +1,4 @@
-open Ocamlib
+open Ocamlib.Unit
 
 let test_equal () =
   Alcotest.(check bool) "same bool" true (equal () ())

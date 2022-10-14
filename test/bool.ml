@@ -1,16 +1,16 @@
-open Ocamlib
+open Ocamlib.Bool
 
 let test_not () =
   Alcotest.(check bool) "same bool" false (not true);
   Alcotest.(check bool) "same bool" true (not false)
 
-let test_(&&) () =
+let (&&) () =
   Alcotest.(check bool) "same bool" false ((&&) false false);
   Alcotest.(check bool) "same bool" false ((&&) false true);
   Alcotest.(check bool) "same bool" false ((&&) true false);
   Alcotest.(check bool) "same bool" true ((&&) true true)
 
-let test_(||) () =
+let (||) () =
   Alcotest.(check bool) "same bool" false ((||) false false);
   Alcotest.(check bool) "same bool" true ((||) false true);
   Alcotest.(check bool) "same bool" true ((||) true false);
@@ -27,8 +27,8 @@ let test_to_int () =
   Alcotest.(check int) "same int" 1 (to_int true)
 
 let test_to_float () =
-  Alcotest.(check float) "same float" 0. (to_float false);
-  Alcotest.(check float) "same float" 1. (to_float true)
+  Alcotest.(check (float Float.epsilon)) "same float" 0.0 (to_float false);
+  Alcotest.(check (float Float.epsilon)) "same float" 1.0 (to_float true)
 
 let test_to_string () =
   Alcotest.(check string) "same string" "false" (to_string false);
