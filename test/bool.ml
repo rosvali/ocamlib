@@ -22,12 +22,6 @@ let test_equal () =
   Alcotest.(check bool) "same bool" false (equal true false);
   Alcotest.(check bool) "same bool" false (equal false true)
 
-let test_compare () =
-  Alcotest.(check int) "same int" 0 (compare false false);
-  Alcotest.(check int) "same int" 0 (compare true true);
-  Alcotest.(check int) "same int" 1 (compare true false);
-  Alcotest.(check int) "same int" -1 (compare false true)
-
 let test_to_int () =
   Alcotest.(check int) "same int" 0 (to_int false);
   Alcotest.(check int) "same int" 1 (to_int true)
